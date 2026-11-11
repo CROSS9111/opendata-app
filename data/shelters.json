@@ -1,0 +1,220 @@
+[
+  {
+    "id": "sample-001",
+    "name": "サンプル第一小学校",
+    "nameKana": "サンプルダイイチショウガッコウ",
+    "address": "サンプル市サンプル区サンプル町1-1",
+    "lat": 34.9756,
+    "lng": 138.3828,
+    "hazards": [
+      "flood",
+      "earthquake",
+      "fire"
+    ],
+    "capacity": 450,
+    "phone": "000-0000-0001"
+  },
+  {
+    "id": "sample-002",
+    "name": "サンプル第二小学校",
+    "nameKana": "サンプルダイニショウガッコウ",
+    "address": "サンプル市サンプル区サンプル町2-3",
+    "lat": 34.9811,
+    "lng": 138.3902,
+    "hazards": [
+      "flood",
+      "earthquake",
+      "inlandFlood"
+    ],
+    "capacity": 380,
+    "phone": "000-0000-0002"
+  },
+  {
+    "id": "sample-003",
+    "name": "サンプル中学校",
+    "nameKana": "サンプルチュウガッコウ",
+    "address": "サンプル市サンプル区見本1-5-2",
+    "lat": 34.9632,
+    "lng": 138.4011,
+    "hazards": [
+      "earthquake",
+      "tsunami",
+      "stormSurge",
+      "fire"
+    ],
+    "capacity": 600,
+    "phone": "000-0000-0003",
+    "note": "屋上に避難できます（架空）"
+  },
+  {
+    "id": "sample-004",
+    "name": "サンプル市民体育館",
+    "nameKana": "サンプルシミンタイイクカン",
+    "address": "サンプル市サンプル区見本3-8",
+    "lat": 34.9585,
+    "lng": 138.4102,
+    "hazards": [
+      "earthquake",
+      "tsunami",
+      "stormSurge",
+      "flood"
+    ],
+    "capacity": 1200,
+    "phone": "000-0000-0004",
+    "note": "車いす用の入口あり（架空）"
+  },
+  {
+    "id": "sample-005",
+    "name": "サンプル公民館",
+    "nameKana": "サンプルコウミンカン",
+    "address": "サンプル市サンプル区見本町4-2",
+    "lat": 34.9702,
+    "lng": 138.3775,
+    "hazards": [
+      "flood",
+      "landslide",
+      "earthquake"
+    ],
+    "capacity": 150,
+    "phone": "000-0000-0005"
+  },
+  {
+    "id": "sample-006",
+    "name": "サンプル高等学校",
+    "nameKana": "サンプルコウトウガッコウ",
+    "address": "サンプル市サンプル区サンプル台2-10",
+    "lat": 34.992,
+    "lng": 138.475,
+    "hazards": [
+      "earthquake",
+      "tsunami",
+      "fire",
+      "stormSurge"
+    ],
+    "capacity": 800,
+    "phone": "000-0000-0006"
+  },
+  {
+    "id": "sample-007",
+    "name": "サンプル中央公園",
+    "nameKana": "サンプルチュウオウコウエン",
+    "address": "サンプル市サンプル区中央1-1",
+    "lat": 34.974,
+    "lng": 138.389,
+    "hazards": [
+      "earthquake",
+      "fire"
+    ],
+    "capacity": 3000,
+    "note": "屋外の広場（架空）"
+  },
+  {
+    "id": "sample-008",
+    "name": "サンプル地域センター",
+    "nameKana": "サンプルチイキセンター",
+    "address": "サンプル市サンプル区見本3-3",
+    "lat": 34.985,
+    "lng": 138.468,
+    "hazards": [
+      "landslide",
+      "flood",
+      "earthquake"
+    ],
+    "capacity": 220,
+    "phone": "000-0000-0008"
+  },
+  {
+    "id": "sample-009",
+    "name": "サンプル山の上小学校",
+    "nameKana": "サンプルヤマノウエショウガッコウ",
+    "address": "サンプル市サンプル区山の上5-1",
+    "lat": 34.999,
+    "lng": 138.365,
+    "hazards": [
+      "landslide",
+      "earthquake",
+      "volcano"
+    ],
+    "capacity": 300,
+    "phone": "000-0000-0009",
+    "note": "土砂災害警戒区域の外（架空）"
+  },
+  {
+    "id": "sample-010",
+    "name": "サンプル海辺運動場",
+    "nameKana": "サンプルウミベウンドウジョウ",
+    "address": "サンプル市サンプル区海辺2-2",
+    "lat": 34.948,
+    "lng": 138.42,
+    "hazards": [
+      "earthquake",
+      "tsunami",
+      "stormSurge"
+    ],
+    "capacity": 2000
+  },
+  {
+    "id": "sample-011",
+    "name": "サンプル総合福祉センター",
+    "nameKana": "サンプルソウゴウフクシセンター",
+    "address": "サンプル市サンプル区福祉町7-7",
+    "lat": 34.968,
+    "lng": 138.385,
+    "hazards": [
+      "flood",
+      "earthquake",
+      "fire",
+      "inlandFlood"
+    ],
+    "capacity": 500,
+    "phone": "000-0000-0011",
+    "note": "福祉避難室あり（架空）"
+  },
+  {
+    "id": "sample-012",
+    "name": "サンプル第三小学校",
+    "nameKana": "サンプルダイサンショウガッコウ",
+    "address": "サンプル市サンプル区サンプル北3-4",
+    "lat": 34.971,
+    "lng": 138.396,
+    "hazards": [
+      "flood",
+      "earthquake",
+      "inlandFlood",
+      "fire"
+    ],
+    "capacity": 420,
+    "phone": "000-0000-0012"
+  },
+  {
+    "id": "sample-013",
+    "name": "サンプル文化会館",
+    "nameKana": "サンプルブンカカイカン",
+    "address": "サンプル市サンプル区文化通り1-9",
+    "lat": 34.989,
+    "lng": 138.459,
+    "hazards": [
+      "earthquake",
+      "tsunami",
+      "fire"
+    ],
+    "capacity": 700,
+    "phone": "000-0000-0013"
+  },
+  {
+    "id": "sample-014",
+    "name": "サンプル森林公園広場",
+    "nameKana": "サンプルシンリンコウエンヒロバ",
+    "address": "サンプル市サンプル区森町9-1",
+    "lat": 35.005,
+    "lng": 138.37,
+    "hazards": [
+      "earthquake",
+      "landslide",
+      "volcano",
+      "fire"
+    ],
+    "capacity": 1500,
+    "note": "夜間は照明なし（架空）"
+  }
+]
