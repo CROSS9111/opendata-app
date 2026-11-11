@@ -8,6 +8,21 @@
 このアプリでいちばん大事なのは、**フロントエンドとバックエンドの役割を分けること**です。
 機能を足すときも、この分け方を崩さないでください。
 
+## 編集してよい範囲（いちばん先に守る）
+
+**このアプリでは、基本的に UI（画面の側）だけを編集します。**
+
+| 区分 | フォルダ・ファイル | 編集 |
+|---|---|---|
+| UI | `frontend/`（`views/`、`components/`、`api/sheltersApi.ts`）、ページの入口（`app/page.tsx`、`app/<名前>/page.tsx`）、見た目（`app/layout.tsx`、`app/globals.css`） | してよい |
+| サーバー | `app/api/`、`backend/` | 頼まれたときだけ |
+| 約束事とデータ | `shared/`、`data/`、`scripts/` | 頼まれたときだけ |
+| 設定 | `package.json`（部品の追加を含む）、`eslint.config.mjs`、`next.config.ts`、`tsconfig.json` | 頼まれたときだけ |
+
+- 頼まれた機能を、まず UI の側だけで作れないかを考えます。今の API でできることは、`GET /api/shelters`（`?hazard=` で災害の種類、`?q=` で名前・住所の絞り込み）と、`GET /api/shelters/[id]`（1件）です
+- UI だけでは作れないときは、作り始める前に止まります。「なぜ UI だけでは作れないか」と「どのファイルを変える必要があるか」を伝え、了解を得てから進めます
+- 「頼まれたとき」とは、利用者がそのフォルダやファイルを変えてよいと、はっきり言ったときです。「機能を足して」だけでは、UI の外を変えてよい理由になりません
+
 ## 3つの層はどこにあるか
 
 ```mermaid
@@ -81,7 +96,7 @@ sequenceDiagram
 
 ## 機能を足すときの手順
 
-各手順は、上から順に触ります。
+各手順は、上から順に触ります。「UIの外も触る」と書いた手順は、上の「編集してよい範囲」に沿って、始める前に了解を得ます。
 
 **(a) 災害の種類で絞り込むボタン（フロントだけ）**
 バックエンドはもう `hazard` に対応しています。
@@ -92,21 +107,22 @@ sequenceDiagram
 **(b) 検索欄（フロントだけ）**
 バックエンドはもう `q` に対応しています。(a) と同じ形で、`q` を渡します。
 
-**(c) 新しい項目を表示する**
+**(c) 新しい項目を表示する（UIの外も触る）**
 1. `shared/types.ts`：`Shelter` に項目を足す
 2. `data/shelters.json`：値を足す（必要なら `scripts/import-shelters-csv.mjs` も）
 3. `backend/repositories/shelterRepository.ts`：必要なら読み方を直す
 4. `backend/services/shelterService.ts`：ルールが要るときだけ
 5. `frontend/components/`：表示を足す
 
-**(d) データをDBに替える**
+**(d) データをDBに替える（UIの外も触る）**
 触るのは `backend/repositories/` だけです。関数の名前と返す型は変えません。service、route、frontend は触りません。
 注意：Vercel では、`data/` のファイルや SQLite に書き込んでも残りません（サーバーが立ち上がっては消える作りのためです）。書き込むなら Neon・Supabase（PostgreSQL）や Turso のような外のDBを使います。読むだけなら、今の JSON のままでかまいません。
 
 **(e) 地図を表示する**
 フロントの部品（`frontend/components/`）だけを足します。座標は `Shelter` の `lat`、`lng` にあります。
+地図のライブラリを入れると `package.json` が変わるので、入れる前に了解を得ます（UIの外も触る）。
 
-**(f) 新しいAPIを足す**
+**(f) 新しいAPIを足す（UIの外も触る）**
 1. `shared/types.ts`：返す形（response の型）を決める
 2. `backend/repositories/`：新しいデータが要るときだけ関数を足す
 3. `backend/services/`：ルールを書く
